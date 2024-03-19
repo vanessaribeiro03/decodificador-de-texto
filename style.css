@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+:root {
+  --branco: #ffffff;
+
+  --azul-escuro-100: ##609ed4;
+  --azul-escuro-200: #356ea9;
+  --azul-escuro-300: #0a3871;
+  --azul-escuro-400: #072b61;
+  --azul-escuro-500: #052051;
+
+  --azul-claro-100: #f3f5fc;
+  --azul-claro-200: #eff1fa;
+  --azul-claro-300: #e9ecf8;
+  --azul-claro-400: #aab2d5;
+  --azul-claro-500: #757fb2;
+
+  --cinza-100: #ced4da;
+  --cinza-200: #adb5bd;
+  --cinza-300: #868e96;
+  --cinza-400: #495057;
+  --cinza-500: #343a40;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+
+  background-color: var(--azul-claro-100);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: 100vh;
+  padding: 55px 70px;
+}
+
+.logo-area {
+  flex: 1;
+}
+
+.area-de-criptografia {
+  flex: 7;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  width: 680px;
+}
+
+.area-de-criptografia textarea {
+  width: 100%;
+  height: 700px;
+  border: none;
+  margin-top: 100px;
+  padding: 0 40px;
+  resize: none;
+
+  font-size: 32px;
+  font-weight: 400;
+
+  background-color: var(--azul-claro-100);
+  color: var(--azul-escuro-300);
+}
+
+.area-de-criptografia textarea:focus {
+  outline: none;
+}
+
+.area-de-botoes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 680px;
+}
+
+.mensagem-de-erro {
+  display: flex;
+}
+
+.mensagem-de-alerta {
+  margin-left: 4px;
+
+  font-weight: 400;
+  font-size: 12px;
+
+  color: var(--cinza-400);
+}
+
+.botao-de-criptografar {
+  width: 328px;
+  height: 67px;
+  border-radius: 24px;
+  border: none;
+  margin-top: 16px;
+  cursor: pointer;
+  transition: 1s all;
+
+  font-weight: 400;
+  font-size: 16px;
+
+  background-color: var(--azul-escuro-300);
+  color: var(--branco);
+}
+
+.botao-de-criptografar:hover {
+  filter: brightness(75%);
+}
+
+.botao-de-descriptografar {
+  width: 328px;
+  height: 67px;
+  border-radius: 24px;
+  border: 1px solid var(--azul-escuro-300);
+  margin-top: 16px;
+  margin-left: 16px;
+  cursor: pointer;
+  transition: 1s all;
+
+  font-weight: 400;
+  font-size: 16px;
+
+  background-color: var(--cinza-100);
+  color: var(--azul-escuro-300);
+}
+
+.botao-de-descriptografar:hover {
+  filter: brightness(75%);
+}
+
+.mostrar-mensagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 3.5;
+
+  position: relative;
+  width: 400px;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+
+  background-color: var(--branco);
+}
+
+.mostrar-mensagem img {
+  width: 336px;
+  height: 304px;
+  padding: 35px;
+  display: block;
+}
+
+.mostrar-mensagem h3 {
+  width: 336px;
+  height: 58px;
+  text-align: center;
+  display: block;
+
+  font-weight: 700;
+  font-size: 24px;
+
+  color: var(--cinza-500);
+}
+
+.mostrar-mensagem p {
+  width: 336px;
+  height: 48px;
+  margin-top: 16px;
+  line-height: 24px;
+  text-align: center;
+  display: block;
+
+  font-weight: 400;
+  font-size: 16px;
+
+  color: var(--cinza-400);
+}
+
+.mostrar-mensagem textarea {
+  width: 336px;
+  height: 70%;
+  position: absolute;
+  top: 32px;
+  resize: none;
+  border: none;
+  display: none;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.mostrar-mensagem textarea:focus {
+  outline: 0;
+}
+
+.botao-de-copiar {
+  width: 328px;
+  height: 67px;
+  border-radius: 24px;
+  border: 1px solid var(--azul-escuro-300);
+  margin-top: 16px;
+  margin-left: 16px;
+  position: absolute;
+  bottom: 56px;
+  cursor: pointer;
+  transition: 1s all;
+  display: none;
+
+  font-weight: 400;
+  font-size: 16px;
+
+  background-color: var(--branco);
+  color: var(--azul-escuro-300);
+}
+
+.botao-de-copiar:hover {
+  filter: brightness(75%);
+}
+
+@media screen and (max-width: 520px) {
+  main {
+    height: auto;
+    padding: 50px;
+  }
+
+  .area-de-criptografia {
+    width: 300px;
+  }
+
+  form.area-de-criptografia textarea {
+    width: 300px;
+    height: 300px;
+    margin-top: 38px;
+    padding: 0;
+    font-size: 18px;
+  }
+
+  .area-de-botoes {
+    align-items: center;
+
+    width: 315px;
+  }
+
+  .container-botoes {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .botao-de-criptografar,
+  .botao-de-descriptografar {
+    width: 300px;
+  }
+
+  .botao-de-criptografar {
+    margin-top: 16px;
+  }
+
+  .botao-de-descriptografar {
+    margin-left: 0;
+  }
+
+  div.mostrar-mensagem {
+    width: 290px;
+    height: 506px;
+}
+
+  div.mostrar-mensagem h3 {
+      width: 300px;
+
+      font-size: 16px;
+  }
+
+  div.mostrar-mensagem p {
+      width: 270px;
+
+      font-size: 14px;
+  }
+
+  div.mostrar-mensagem textarea {
+      width: 280px;
+      line-height: 20px;
+      padding: 20px;
+
+      font-size: 14px;
+  }
+
+  button.botao-de-copiar {
+      width: 280px;
+      height: 40px;
+      margin-left: 0;
+      margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+
+        height: auto;
+    }
+
+    .area-de-criptografia textarea {
+        height: 400px;
+    }
+
+    .mostrar-mensagem {
+        width: 688px;
+        position: static;
+        margin-top: 64px;
+        padding: 32px;
+    }
+
+    .mostrar-mensagem textarea {
+        width: 624px;
+        height: 343px;
+        position: static;
+    }
+
+    .mostrar-mensagem img {
+        display: none;
+    }
+
+    .mostrar-mensagem h3 {
+        width: 624px;
+        height: 29px;
+        margin-top: 32px;
+        margin-bottom: 16px;
+    }
+
+    .mostrar-mensagem p {
+        width: 624px;
+        height: 24px;
+        margin-bottom: 32px;
+    }
+
+    .botao-de-copiar {
+        width: 624px;
+        height: 67px;
+        position: static;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    main {
+        height: 100vh;
+    }
+
+    .area-de-criptografia textarea {
+        height: 1000px;
+    }
+
+    .mostrar-mensagem textarea {
+        width: 650px;
+    }
+}
