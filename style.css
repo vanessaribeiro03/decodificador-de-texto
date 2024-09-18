@@ -2,18 +2,11 @@
 
 :root {
   --branco: #ffffff;
+  --preto: #000000;
 
-  --azul-escuro-100: ##609ed4;
-  --azul-escuro-200: #356ea9;
-  --azul-escuro-300: #0a3871;
-  --azul-escuro-400: #072b61;
-  --azul-escuro-500: #052051;
-
-  --azul-claro-100: #f3f5fc;
-  --azul-claro-200: #eff1fa;
-  --azul-claro-300: #e9ecf8;
-  --azul-claro-400: #aab2d5;
-  --azul-claro-500: #757fb2;
+  --verde-escuro-100: #00fa9a;
+  --verde-claro-200: #51ffd4;
+  --verde-claro-300: #c1f3d2;
 
   --cinza-100: #ced4da;
   --cinza-200: #adb5bd;
@@ -31,7 +24,7 @@
 body {
   font-family: "Inter", sans-serif;
 
-  background-color: var(--azul-claro-100);
+  background-color: var(--verde-claro-300);
 }
 
 main {
@@ -68,8 +61,8 @@ main {
   font-size: 32px;
   font-weight: 400;
 
-  background-color: var(--azul-claro-100);
-  color: var(--azul-escuro-300);
+  background-color: var(--verde-claro-300);
+  color: var(--preto);
 }
 
 .area-de-criptografia textarea:focus {
@@ -102,7 +95,7 @@ main {
   width: 328px;
   height: 67px;
   border-radius: 24px;
-  border: none;
+  border: 1px solid var(--preto);
   margin-top: 16px;
   cursor: pointer;
   transition: 1s all;
@@ -110,8 +103,8 @@ main {
   font-weight: 400;
   font-size: 16px;
 
-  background-color: var(--azul-escuro-300);
-  color: var(--branco);
+  background-color: var(--verde-escuro-100);
+  color: var(--preto);
 }
 
 .botao-de-criptografar:hover {
@@ -122,7 +115,7 @@ main {
   width: 328px;
   height: 67px;
   border-radius: 24px;
-  border: 1px solid var(--azul-escuro-300);
+  border: 1px solid var(--preto);
   margin-top: 16px;
   margin-left: 16px;
   cursor: pointer;
@@ -131,8 +124,8 @@ main {
   font-weight: 400;
   font-size: 16px;
 
-  background-color: var(--cinza-100);
-  color: var(--azul-escuro-300);
+  background-color: var(--verde-claro-200);
+  color: var(--preto);
 }
 
 .botao-de-descriptografar:hover {
@@ -209,7 +202,7 @@ main {
   width: 328px;
   height: 67px;
   border-radius: 24px;
-  border: 1px solid var(--azul-escuro-300);
+  border: 1px solid var(--preto);
   margin-top: 16px;
   margin-left: 16px;
   position: absolute;
@@ -221,8 +214,8 @@ main {
   font-weight: 400;
   font-size: 16px;
 
-  background-color: var(--branco);
-  color: var(--azul-escuro-300);
+  background-color: var(--verde-claro-300);
+  color: var(--preto);
 }
 
 .botao-de-copiar:hover {
